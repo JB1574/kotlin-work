@@ -19,7 +19,7 @@ fun isValidTriangle(triangle: Triangle): Boolean {
 }
 
 fun triangleArea(triangle: Triangle): Double {
-    if (!isValidTriangle(triangle)) return 0.0
+   
 
     val (a, b, c) = triangle
     val semiPerimeter = (a + b + c) / 2.0
