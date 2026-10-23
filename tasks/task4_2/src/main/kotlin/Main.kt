@@ -9,6 +9,7 @@ fun main() {
     println("(c) Pepperoni")
     println("(d) Hawaiian")
     println(" ")
+    
     print("Choose your pizza (a-d): ")
     val order = readln().lowercase()
     
@@ -16,7 +17,7 @@ fun main() {
         println("Order accepted")
     }
     else {
-        println("Invalid choice")
+        println("Invalid choice") // test
 }
 
 }

@@ -1,4 +1,5 @@
-// COMP2850 Portfolio: Week 3
+
+ // COMP2850 Portfolio: Week 3
 // Tests for median()
 
 import io.kotest.core.spec.style.FreeSpec
@@ -16,5 +17,19 @@ class MedianTest : FreeSpec({
         }
     }
 
-    // Write four more tests here
+    "Median when size=1" { //
+        median(listOf(5.0f)) shouldBe 5.0f 
+    } // check that median of a single element list is the element itself
+
+    "Median when size=2" {
+        median(listOf(2.0f, 8.0f)) shouldBe (5.0f plusOrMinus tolerance)
+    } // check that median of a two element list is the average of the two elements
+
+    "Median when size=3" {
+        median(listOf(9.0f, 1.0f, 5.0f)) shouldBe 5.0f
+    } // check that median of a three element list is the middle element when sorted
+
+    "Median when size=4" {
+        median(listOf(10.0f, 2.0f, 8.0f, 4.0f)) shouldBe (6.0f plusOrMinus tolerance)
+    } // check that median of a four element list is the average of the two middle elements when sorted
 })
